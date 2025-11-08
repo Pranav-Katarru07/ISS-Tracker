@@ -37,17 +37,19 @@ def main(user_lon, user_lat):
     location.dot(5)
     location.hideturtle()
 
-    url = "http://api.open-notify.org/iss-pass.json"
-    url = url + "?lat=" + str(user_lat) + "&lon=" + str(user_lon)
-    response = urllib.request.urlopen(url)
-    result = json.loads(response.read())
-    # print(result)
+    # ISS Pass predictions are now turned off temporarily by Open-Notify
 
-    over = result["response"][0]["risetime"]
-    # print(over)
+    # url = "http://api.open-notify.org/iss-pass.json"
+    # url = url + "?lat=" + str(user_lat) + "&lon=" + str(user_lon)
+    # response = urllib.request.urlopen(url)
+    # result = json.loads(response.read())
+    # # print(result)
 
-    style = ("noteworthy", 4, 'bold')
-    location.write("My House" + time.ctime(over), font = style, align = 'center')
+    # over = result["response"][0]["risetime"]
+    # # print(over)
+
+    # style = ("noteworthy", 4, 'bold')
+    # location.write("My House" + time.ctime(over), font = style, align = 'center')
 
     turtle.mainloop()
 
